@@ -11,7 +11,4 @@ const commandArguments = new ArgsAnalyzer().hasArg([
 ])
 const dataAnalyzer = new DataAnalyzer(['people', 'animals'])
 
-console.dir(dataAnalyzer.apply(data, commandArguments.filter, commandArguments.count), {
-  depth: null,
-  maxArrayLength: null
-})
+console.log(JSON.stringify(dataAnalyzer.apply(data, commandArguments.filter, commandArguments.count) ,null, 2))
